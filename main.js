@@ -1,8 +1,17 @@
+const startButton = document.getElementById('start');
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
+let quizDiv = document.querySelector('.quiz');
 
-submitButton.addEventListener('click', showResults);
+// submitButton.addEventListener('click', showResults);
+function startQuiz(){
+    for (let i = 1; i < 10; i++) {
+    quizDiv += '<p>Deze div wordt toegevoegd!</p>';
+    }
+};
+startButton.addEventListener('click', startQuiz);
+
 
 const questions = [
     {
@@ -14,38 +23,31 @@ const questions = [
     },
     {
         question: "Wie is de baas van Turkije?",
-        answers: {
-            a: "Erdogan",
-            b: "De Paus",
-            c: "Donald Trump"
-          },
-          correctAnswer: "a"
+        optionA: "Erdogan",
+        optionB: "De Paus",
+        optionC: "Donald Trump",
+        answer: "Erdogan"
     },
     {
         question: "Wie aanbidden Turken?",
-        answers: {
-            a: "Erdogan",
-            b: "De god van hun eigen religie",
-            c: "Attaturk"
-          },
-          correctAnswer: "b"
+        optionA: "Erdogan",
+        optionB: "De god van hun eigen religie",
+        optionC: "Attaturk",
+        answer: "De god van hun religie"
     },
     {
         question: "Wat is de hoofdstad van Turkije",
-        answers: {
-            a: "Istanbul",
-            b: "Rabat",
-            c: "Ankara"
-          },
-          correctAnswer: "c"
+        optionA: "Istanbul",
+        optionB: "Rabat",
+        optionC: "Ankara",
+        answer: "Ankara"
     },
     {
         question: "Wat is de nationale sport van Turken?",
-        answers: {
-            a: "Olieworstelen",
-            b: "Armpje drukken",
-            c: "Voetbal"
-          },
-          correctAnswer: "a"
+        optionA: "Olieworstelen",
+        optionB: "Armpje drukken",
+        optionC: "Voetbal",
+        answer: "Olieworstelen"
     },
 ];
+
