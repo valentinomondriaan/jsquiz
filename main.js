@@ -7,7 +7,8 @@ let quizDiv = document.querySelector('.quiz');
 // submitButton.addEventListener('click', showResults);
 function startQuiz(){
     for (let i = 1; i < 10; i++) {
-    quizDiv += '<p>Deze div wordt toegevoegd!</p>';
+    quizDiv.innerHTML = questions[0].question + '<button class="next">Next</button>';
+    startButton.parentNode.removeChild(start);
     }
 };
 startButton.addEventListener('click', startQuiz);
